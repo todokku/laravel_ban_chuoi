@@ -70,3 +70,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Laravel Shopping Cart
+composer require bumbummen99/shoppingcart
+
+## Laravel Moudle
+https://github.com/nWidart/laravel-modules
+composer require nwidart/laravel-modules
+php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
