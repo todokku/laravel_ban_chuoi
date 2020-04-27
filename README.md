@@ -74,7 +74,9 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 ## Laravel Shopping Cart
 composer require bumbummen99/shoppingcart
 
-## Laravel Moudle
+## Document Laravel Shopping Cart
+
+https://packagist.org/packages/bumbummen99/shoppingcart
+
+## Laravel-Modules
 https://github.com/nWidart/laravel-modules
-composer require nwidart/laravel-modules
-php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
