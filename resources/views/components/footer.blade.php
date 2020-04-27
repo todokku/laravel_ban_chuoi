@@ -6,7 +6,7 @@
                 <div class="col-md-3 col-sm-4">
                     <div class="single-snap-footer">
                         <div class="snap-footer-title">
-                            <h4>Company info</h4>
+                            <h4>test1 Company info</h4>
                         </div>
                         <div class="cakewalk-footer-content">
                             <p class="footer-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
