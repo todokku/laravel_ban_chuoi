@@ -4,7 +4,8 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Transactions;
 use App\Models\Orders;
-use Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
+
 class ShoppingCartController extends Controller
 {
     public function addProduct(Request $request, $id) {
@@ -22,6 +23,7 @@ class ShoppingCartController extends Controller
             'id' => $id, 
             'name' => $product->product_name,
             'qty' => 1, 
+            'weight' => 1,
             'price' => $price, 
             'options' => [
                 'avatar' => $product->product_avatar,
@@ -29,7 +31,7 @@ class ShoppingCartController extends Controller
                 'price_old' => $price,
             ]
         ];
-        \Cart::add($cartInfo);
+        Cart::add($cartInfo);
         return redirect()->back();
     }
 
@@ -40,18 +42,15 @@ class ShoppingCartController extends Controller
     }
 
     public function getListProductShopping() {
-        $products = \Cart::content();
+        $products = Cart::content();
         return view('shopping.index', compact('products'));
     }
 
     public function getCheckout() {
-        $products = \Cart::content();
+        $products = Cart::content();
         return view('shopping.checkout', compact('products'));
     }
 
-    // public function getThankyou() {
-    //     return view('shopping.thanks-you');
-    // }
 
     /* LƯU THÔNG TIN ĐƠN HÀNG */
     public function saveInfoShoppingCart(Request $request) {
@@ -80,10 +79,6 @@ class ShoppingCartController extends Controller
         }
 
         Cart::destroy();
-
-        // return redirect()->route('shopping.thanks-you');
-        // dd($request->all());
-        // return redirect()->route('home');
         return view('thank-you.thanks-you');
     }
 

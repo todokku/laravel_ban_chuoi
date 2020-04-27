@@ -46,12 +46,12 @@ Route::get('lien-he', 'ContactController@getContact')->name('get.contact');
 Route::post('lien-he', 'ContactController@postContact')->name('post.contact');
 
 
-// Route::group(['prefix' => 'shopping'], function () {
-//     Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
-//     Route::get('/delete/{id}', 'ShoppingCartController@deleteProduct')->name('detele.shopping.cart');
-//     Route::get('/danh-sach', 'ShoppingCartController@getListProductShopping')->name('get.list.shopping.cart');
+Route::group(['prefix' => 'shopping'], function () {
+    Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
+    Route::get('/delete/{id}', 'ShoppingCartController@deleteProduct')->name('detele.shopping.cart');
+    Route::get('/danh-sach', 'ShoppingCartController@getListProductShopping')->name('get.list.shopping.cart');
     
-// });
+});
 
 
 
@@ -59,8 +59,8 @@ Route::post('lien-he', 'ContactController@postContact')->name('post.contact');
     
 // // });
 
-// Route::group(['prefix' => 'gio-hang','middleware' => 'CheckLoginUser'], function () {
-//     Route::get('/thanh-toan', 'ShoppingCartController@getCheckout')->name('get.checkout.shopping.cart');
-//     Route::post('/thanh-toan', 'ShoppingCartController@saveInfoShoppingCart');
-//     // Route::get('/thank-you', 'ShoppingCartController@getThankyou')->name('get.thankyou.shopping.cart');
-// });
+Route::group(['prefix' => 'gio-hang','middleware' => 'CheckLoginUser'], function () {
+    Route::get('/thanh-toan', 'ShoppingCartController@getCheckout')->name('get.checkout.shopping.cart');
+    Route::post('/thanh-toan', 'ShoppingCartController@saveInfoShoppingCart');
+    // Route::get('/thank-you', 'ShoppingCartController@getThankyou')->name('get.thankyou.shopping.cart');
+});
