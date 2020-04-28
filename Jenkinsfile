@@ -8,7 +8,7 @@ pipeline {
        steps {
         script {
           echo 'Fetch data from git and reset the code to mater'
-          sh 'git checkout origin master'
+          sh 'git checkout master'
           sh 'git pull origin master'
           sh 'git reset --hard origin/master'
         }
