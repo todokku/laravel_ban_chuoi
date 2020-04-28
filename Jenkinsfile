@@ -11,6 +11,7 @@ pipeline {
           sh 'git checkout master'
           sh 'git pull origin master'
           sh 'git reset --hard origin/master'
+          sh 'cp .env.example .env'
         }
       }
     }
