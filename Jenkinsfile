@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'composer install'
+        // sh 'composer install'
         sh 'npm install'
       }
     }
