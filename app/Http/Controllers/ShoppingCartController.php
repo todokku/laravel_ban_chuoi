@@ -6,7 +6,7 @@ use App\Models\Transactions;
 use App\Models\Orders;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
-class ShoppingCartController extends Controller
+class ShoppingCartController extends FrontendController
 {
     public function addProduct(Request $request, $id) {
         $product = Product::select('id', 'product_name', 'product_price', 'product_sale', 'product_avatar')->find($id);

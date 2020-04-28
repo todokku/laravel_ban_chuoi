@@ -414,3 +414,15 @@ ul.restrain.language{text-align: left;}
  
 }
 
+/* RATINGS */
+.component-ratings {
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+.ratings-item .span-star b {
+    font-size: 40px;
+    color: #fd9727;
+    line-height: 40px;
+}

@@ -1,0 +1,85 @@
+/* RATINGS */
+.component-ratings {
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+.ratings-item .span-star b {
+    font-size: 40px;
+    color: #fd9727;
+    line-height: 40px;
+}
+.ratings-item .class-star {
+	font-size: 40px;
+    color: #fd9727;
+    line-height: 40px;
+}
+.component-ratings .left-ratings {
+	width: 17%;
+    float: left;
+    border-right: solid 1px #eee;
+    padding-top: 31px;
+    height: 90%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 5px 10px 5px 5px;
+}
+.component-ratings .right-ratings {
+	font-size: 13px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 10px 0;
+    width: 45%;
+    float: left;
+    border-right: solid 1px #eee;
+}
+.i-star {
+	width: auto;
+    float: left;
+}
+.line-before {
+	width: 55%;
+    background-color: #e9e9e9;
+    height: 5px;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+.line-before .bgb-in {
+    background-color: #f25800;
+    background-image: linear-gradient(90deg,#ff7d26 0%,#f25800 97%);
+    height: 5px;
+    border-radius: 5px 0 0 5px;
+    max-width: 100%;
+}
+.list-ratings .total-ratings {
+	display: inline-block;
+    color: #288ad6;
+    cursor: pointer;
+}
+.button-ratings-end {
+	display: block;
+    width: 200px;
+    margin: 41px auto 0;
+    padding: 10px;
+    color: #fff;
+    background-color: #288ad6;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.component-right-ratings {
+	padding: 1px 20px;
+}
+.choose-ratings {
+	display: fex;
+	margin-bottom: 15px;
+	font-size: 15px
+}
+.choose-list-ratings {
+	margin: 0 15px;
+}
+.p-choose-ratings {
+	float: left
+}

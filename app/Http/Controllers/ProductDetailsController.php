@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 class ProductDetailsController extends FrontendController
 {
+    
+    public function __construct() {
+        parent::__construct();
+    }
+
+
     public function getProductDetails(Request $request) {
 
         $url = $request->segment(2);

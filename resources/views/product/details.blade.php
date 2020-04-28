@@ -228,74 +228,58 @@
             <div class="single-product-tab">
                 <!-- Nav tabs -->
                 <ul class="details-tab">
-                    <li class="active"><a href="#home" data-toggle="tab">Mô tả ngắn</a></li>
-                    <li class=""><a href="#messages" data-toggle="tab"> Review (1)</a></li>
+                    <li class="active"><a href="#home" data-toggle="tab">Chi tiết sản phẩm</a></li>
+                    <li class=""><a href="#messages" data-toggle="tab"> Đánh giá</a></li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="home">
                         <div class="product-tab-content">
-                            <p>{{$product->product_description}}</p>
+                            <p>{{$product->product_content}}</p>
                             
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="messages">
-                        <div class="single-post-comments col-md-6 col-md-offset-3">
-                            <div class="comments-area">
-                                <h3 class="comment-reply-title">1 REVIEW FOR TURPIS VELIT ALIQUET</h3>
-                                <div class="comments-list">
-                                    <ul>
-                                        <li>
-                                            <div class="comments-details">
-                                                <div class="comments-list-img">
-                                                    <img src="img/user-1.jpg" alt="">
-                                                </div>
-                                                <div class="comments-content-wrap">
-                                                    <span>
-                                                        <b><a href="#">Admin - </a></b>
-                                                        <span class="post-time">October 6, 2014 at 1:38 am</span>
-                                                    </span>
-                                                    <p>Lorem et placerat vestibulum, metus nisi posuere nisl, in
-                                                        accumsan elit odio quis mi.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                    <div class="component-ratings">
+                        <h3> Đánh giá sản phẩm </h3>
+                        <div class="row">
+                            <div class="left-ratings">
+                                <div class="ratings-item">
+                                    <div class="span-star">
+                                        <b>2.5</b>
+                                        <span class="class-star fa fa-star"></span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="comment-respond">
-                                <h3 class="comment-reply-title">Add a review</h3>
-                                <span class="email-notes">Your email address will not be published. Required fields are
-                                    marked *</span>
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <p>Name *</p>
-                                            <input type="text">
-                                        </div>
-                                        <div class="col-md-12">
-                                            <p>Email *</p>
-                                            <input type="email">
-                                        </div>
-                                        <div class="col-md-12">
-                                            <p>Your Rating</p>
-                                            <div class="pro-rating">
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                                <a href="#"><i class="fa fa-star-o"></i></a>
-                                                <a href="#"><i class="fa fa-star-o"></i></a>
+                            <div class="right-ratings">
+                                <div class="list-ratings">
+                                    @for($i = 1; $i <= 5; $i++)
+                                        <div class="component-right-ratings">
+                                            <div class="i-star"> 
+                                                {{$i}} <span class="fa fa-star"></span>
+                                            </div>
+                                            <div class="line-before">
+                                                <div class="bgb-in" style="width: 28%"></div>
+                                            </div>
+                                            <div class="total-ratings">
+                                                <strong class="strong-number-ratings">119</strong> đánh giá
                                             </div>
                                         </div>
-                                        <div class="col-md-12 comment-form-comment">
-                                            <p>Your Review</p>
-                                            <textarea id="message" cols="30" rows="10"></textarea>
-                                            <input type="submit" value="Submit">
-                                        </div>
-                                    </div>
-                                </form>
+                                    @endfor
+                                </div>
+                            </div>
+                            <div class="button-ratings">
+                                <button type="submit" class="button-ratings-end">Gửi đánh giá của bạn</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="choose-ratings">
+                        <p class="p-choose-ratings">Chọn đánh giá của bạn</p>
+                        <span class="choose-list-ratings">
+                            @for ($i = 1; $i <= 5; $i++)
+                                <i class="fa fa-star"></i>
+                            @endfor
+                        </span>
+                        <span class="title-choose-ratings">Tốt</span>
                     </div>
                 </div>
             </div>
