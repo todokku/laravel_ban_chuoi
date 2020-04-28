@@ -272,6 +272,15 @@
                             </div>
                         </div>
                     </div>
+                    <?php 
+                        $listRatingsLabel = array(
+                            1 => 'Không thích',
+                            2 => 'Tạm được',
+                            3 => 'Bình thường',
+                            4 => 'Rất tốt',
+                            5 => 'Tuyệt vời',
+                        );
+                    ?>
                     <div class="choose-ratings">
                         <p class="p-choose-ratings">Chọn đánh giá của bạn</p>
                         <span class="choose-list-ratings">
