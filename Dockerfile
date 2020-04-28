@@ -8,3 +8,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY . .
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+RUN ["cp", ".env.example", ".env" ]
+
+RUN ["composer", "install"]
+
+RUN ["npm",  "install"]

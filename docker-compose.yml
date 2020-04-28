@@ -1,12 +1,12 @@
 version: "3"
 
-services: 
+services:
     app:
-        image: laravel_ban_chuoi
+        image: lpcuong2106/laravel_ban_chuoi
         restart: unless-stopped
         volumes:
             - ./:/var/www/html
-        depends_on: 
+        depends_on:
             - db
         networks:
             - mynet
@@ -32,7 +32,7 @@ services:
             MYSQL_USER: ${DB_USERNAME}
             MYSQL_PASSWORD: ${DB_PASSWORD}
             MYSQL_ROOT_PASSWORD: rootpass
-        expose: 
+        expose:
             - 3306
         volumes:
             - .docker/data/db:/var/lib/mysql/
