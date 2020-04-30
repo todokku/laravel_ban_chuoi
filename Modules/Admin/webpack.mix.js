@@ -12,3 +12,5 @@ mix.js(__dirname + '/Resources/assets/js/app.js', 'js/admin.js')
 if (mix.inProduction()) {
     mix.version();
 }
+
+mix.js(__dirname + '/Resources/assets/sass/breadcrumb.scss', 'css/breadcrumb.css');
