@@ -1,4 +1,7 @@
 @extends('admin::layouts.master')
+@section('title')
+    Trang quản trị
+@stop
 @section('content')
 <div class="content-wrapper" style="min-height: 115px;">
     <!-- Content Header (Page header) -->

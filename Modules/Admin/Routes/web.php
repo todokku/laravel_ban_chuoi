@@ -35,7 +35,7 @@ Route::prefix('admin')->group(function() {
         Route::post('/update/{id}', 'AdminProductController@update');
         Route::get('/delete/{id}', 'AdminProductController@delete')->name('admin.get.delete.product');
         Route::get('/{action}/{id}', 'AdminProductController@action')->name('admin.get.action.product');
-        
+
     });
 
     /* Create Group Post */
@@ -79,5 +79,9 @@ Route::prefix('admin')->group(function() {
 
     Route::get('ckeditor', 'CkeditorController@index');
     Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
+
+    Route::group(['prefix' => 'settings'], function () {
+        Route::get('/', 'AdminSettingController@index')->name('admin.settings.index');
+    });
 });
 
