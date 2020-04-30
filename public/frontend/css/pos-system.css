@@ -68,6 +68,7 @@
     border-radius: 5px;
     text-align: center;
     box-sizing: border-box;
+    border: none;
 }
 .component-right-ratings {
 	padding: 1px 20px;
@@ -82,4 +83,28 @@
 }
 .p-choose-ratings {
 	float: left
+}
+.choose-list-ratings .fa:hover {
+    color:#fdd504
+}
+.title-choose-ratings {
+    background: #f1c40f;
+    border-radius: 2px;
+    padding: 0 5px;
+    border: 1px solid #f1c40f;
+    font-size: 13px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 5px 0 0 10px;
+    color: #fff;
+    display: none;
+}
+.ratings-active {
+    color: #f1c40f;
+}
+.form-ratings.active {
+    display: block;
+}
+.button-submit-ratings {
+    margin-top: 15px;
 }

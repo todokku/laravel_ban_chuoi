@@ -84,3 +84,9 @@
     </section>
 </div>
 @stop
+<script>
+        CKEDITOR.replace('post_content', {
+            filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+    </script>

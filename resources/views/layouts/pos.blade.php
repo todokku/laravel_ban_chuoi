@@ -85,6 +85,7 @@
     <!-- main js
 		============================================ -->
     <script src="{{asset('frontend/js/main.js')}}"></script>
+    <script src="{{asset('frontend/js/front-end.js')}}"></script>
 </body>
 
 </html>

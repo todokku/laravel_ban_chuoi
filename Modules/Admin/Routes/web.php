@@ -76,4 +76,8 @@ Route::prefix('admin')->group(function() {
         Route::get('/delete/{id}', 'AdminTransactionController@deleteDetailsOrders')->name('admin.get.delete.details.orders');
         Route::get('/view/{id}', 'AdminTransactionController@viewOrders')->name('admin.get.view.orders');
     });
+
+    Route::get('ckeditor', 'CkeditorController@index');
+    Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
 });
+

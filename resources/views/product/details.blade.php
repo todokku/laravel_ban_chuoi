@@ -239,8 +239,9 @@
                             
                         </div>
                     </div>
+                     <h3> Đánh giá sản phẩm </h3>
                     <div class="component-ratings">
-                        <h3> Đánh giá sản phẩm </h3>
+                       
                         <div class="row">
                             <div class="left-ratings">
                                 <div class="ratings-item">
@@ -268,7 +269,7 @@
                                 </div>
                             </div>
                             <div class="button-ratings">
-                                <button type="submit" class="button-ratings-end">Gửi đánh giá của bạn</button>
+                                <button type="submit" class="button-ratings-end js-send-ratings">Gửi đánh giá của bạn</button>
                             </div>
                         </div>
                     </div>
@@ -281,15 +282,23 @@
                             5 => 'Tuyệt vời',
                         );
                     ?>
-                    <div class="choose-ratings">
-                        <p class="p-choose-ratings">Chọn đánh giá của bạn</p>
-                        <span class="choose-list-ratings">
-                            @for ($i = 1; $i <= 5; $i++)
-                                <i class="fa fa-star"></i>
-                            @endfor
-                        </span>
-                        <span class="title-choose-ratings">Tốt</span>
-                    </div>
+                    <div class="form-ratings hide">
+                        <div class="choose-ratings">
+                            <p class="p-choose-ratings">Chọn đánh giá của bạn</p>
+                            <span class="choose-list-ratings">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <i class="fa fa-star" data-key="{{$i}}"></i>
+                                @endfor
+                            </span>
+                            <span class="title-choose-ratings"></span>
+                        </div>
+                        <div class="content-ratings">
+                            <textarea name="" class="form-control" cols="30" rows="3"></textarea>
+                        </div>
+                        <div class="button-submit-ratings">
+                            <button class="btn btn-primary">Gửi đánh giá</button>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>

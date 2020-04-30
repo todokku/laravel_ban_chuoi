@@ -241,5 +241,6 @@
     <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
     <script> CKEDITOR.replace( 'product_content' );</script>
     <script> CKEDITOR.replace( 'post_content' );</script>
+    
 </body>
 </html>
