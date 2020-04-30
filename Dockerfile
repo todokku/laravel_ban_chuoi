@@ -8,3 +8,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Copy existing application directory
 COPY . .
+
+RUN chown -R 1000:1000 storage
+RUN chmod -R 775 storage
+RUN chmod -R 775 bootstrap/cache
+RUN chown -R 1000:1000 bootstrap/cache
