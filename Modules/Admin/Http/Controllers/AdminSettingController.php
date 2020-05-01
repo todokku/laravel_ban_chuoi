@@ -17,7 +17,8 @@ class AdminSettingController extends Controller
      */
     public function index(Request $request)
     {
-        return view('admin::settings.index');
+        // return 'hello';
+        return view('admin::settings.settings');
     }
 
 

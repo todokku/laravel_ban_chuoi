@@ -1,11 +1,10 @@
 @extends('admin::layouts.master')
-
 @section('title')
-Cài đặt
+    Trang quản trị
 @stop
 @section('content')
 <div class="content-wrapper">
-    @include('admin::components.breadcrumb', ['title' => 'Cài đặt'])
+        {{-- @include('admin::components.breadcrumb', ['title' => 'Cài đặt']) --}}
       <section class="content">
         <div class="row">
             <div class="col-12">
@@ -16,6 +15,7 @@ Cài đặt
                     <!-- /.box-header -->
                     <!-- form start -->
                     <form role="form">
+                        @csrf
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Copyright</label>
