@@ -22,7 +22,7 @@ class AdminAuthController extends Controller
        
         $data = $request->only('email', 'password');
 		if (Auth::guard('admins')->attempt($data)) {
-			return redirect()->intended('admin.dashboard');
+			return redirect()->route('admin.dashboard');
 		}
 		
 		return redirect()->back();
