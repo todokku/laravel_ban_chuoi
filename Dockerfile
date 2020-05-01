@@ -43,4 +43,4 @@ COPY . .
 RUN chown -R www-data:www-data .
 RUN chmod -R 775 .
 
-USER www-data
+USER root
