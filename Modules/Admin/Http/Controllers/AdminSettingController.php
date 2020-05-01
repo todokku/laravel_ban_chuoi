@@ -21,14 +21,15 @@ class AdminSettingController extends Controller
         return view('admin::settings.index');
     }
     public function store(Request $request){
-        $setting = new Setting(
+        // dd($request);
+        $setting = Setting::create(
             [
-                'logo_url' => $request->logo_url,
-                'copyright' => $request->copyright,
-                'short_description'=> $request->short_description
+                'logo_url' => $request->get('logo_url'),
+                'copyright' => $request->get('copyright_text'),
+                'short_description'=> $request->get('short_description')
             ]
         );
-        return 'success';
+        return redirect()->route('admin.settings.index');
     }
 
 }

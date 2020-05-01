@@ -82,6 +82,7 @@ Route::prefix('admin')->group(function() {
 
     Route::group(['prefix' => 'settings'], function () {
         Route::get('/', 'AdminSettingController@index')->name('admin.settings.index');
+        Route::post('/create', 'AdminSettingController@store')->name('admin.settings.create');
     });
 });
 
