@@ -4,7 +4,10 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('admin.dashboard')}}" class="nav-link">Home</a>
+            <a href="{{route('admin.dashboard')}}" class="nav-link">Trang chủ</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{route('admin.logout')}}" class="nav-link">Đăng xuất</a>
         </li>
     </ul>
     <form class="form-inline ml-3">
@@ -118,7 +121,7 @@
                 <img src="{{ asset('/images/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{get_data_user('admins','name')}}</a>
             </div>
         </div>
         <nav class="mt-2">

@@ -11,8 +11,14 @@
 |
 */
 
-Route::prefix('admin')->group(function() {
-    Route::get('/', 'AdminController@index');
+/* Login Admin */
+Route::group(['prefix' => 'authenticate'], function () {
+    Route::get('/login', 'AdminAuthController@getLoginAdmin')->name('admin.login');
+    Route::post('/login', 'AdminAuthController@postLoginAdmin');
+    Route::get('/logout', 'AdminAuthController@getlogoutAdmin')->name('admin.logout');
+});
+
+Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
 
     /* Create Group Category */
@@ -71,14 +77,21 @@ Route::prefix('admin')->group(function() {
         Route::get('/{action}/{id}', 'AdminUserController@action')->name('admin.get.action.user');
     });
 
+    /* Manager Orders */
+
     Route::group(['prefix' => 'transaction'], function () {
         Route::get('/', 'AdminTransactionController@index')->name('admin.get.list.transaction');
         Route::get('/delete/{id}', 'AdminTransactionController@deleteDetailsOrders')->name('admin.get.delete.details.orders');
         Route::get('/view/{id}', 'AdminTransactionController@viewOrders')->name('admin.get.view.orders');
     });
 
-    Route::get('ckeditor', 'CkeditorController@index');
-    Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
+    /* Ckeditor */
+    Route::group(['prefix' => 'ckeditor'], function () {
+        Route::get('ckeditor', 'CkeditorController@index');
+        Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
+    });
+
+    /* Settings */
 
     Route::group(['prefix' => 'settings'], function () {
         Route::get('/', 'AdminSettingController@index')->name('admin.settings.index');
