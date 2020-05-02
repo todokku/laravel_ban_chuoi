@@ -149,7 +149,7 @@
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.product' ? 'nav-item active' : 'nav-item' }}">
                     <a href="{{ route('admin.get.list.product') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-fw fa-cubes"></i>
                         <p>
                             Quản lý sản phẩm
                             <i class="fas fa-angle-left right"></i>
@@ -159,7 +159,7 @@
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.post' ? 'nav-item active' : 'nav-item' }}">
                     <a href="{{ route('admin.get.list.post') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-fw fa-paint-brush"></i>
                         <p>
                             Quản lý bài viết
                             <i class="fas fa-angle-left right"></i>
@@ -169,7 +169,7 @@
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.banner' ? 'nav-item active' : 'nav-item' }}">
                     <a href="{{ route('admin.get.list.banner') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-fw fa-image"></i>
                         <p>
                             Quản lý banner
                             <i class="fas fa-angle-left right"></i>
@@ -179,7 +179,7 @@
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.transaction' ? 'nav-item active' : 'nav-item' }}">
                     <a href="{{ route('admin.get.list.transaction') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-fw fa-life-ring"></i>
                         <p>
                             Quản lý Đơn hàng
                             <i class="fas fa-angle-left right"></i>
@@ -189,7 +189,7 @@
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.user' ? 'nav-item active' : 'nav-item' }}">
                     <a href="{{ route('admin.get.list.user') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-fw fa-users"></i>
                         <p>
                             Quản lý thành viên
                             <i class="fas fa-angle-left right"></i>
@@ -199,7 +199,7 @@
                 </li>
                 <li  class="{{ \Request::route()->getName() == 'admin.settings.index' ? 'nav-item active' : 'nav-item' }}">
                     <a href="{{route('admin.settings.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th" ></i>
+                        <i class="nav-icon fa fa-fw fa-cog" ></i>
                         <p>
                             Cài đặt
                         </p>
