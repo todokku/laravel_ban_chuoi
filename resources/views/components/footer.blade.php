@@ -111,42 +111,47 @@
                             </div>
                         </div>
                     @php } @endphp
+                    <?php if(!empty($setting->phone_number)){ ?>
                     <div class="col-md-3 col-sm-4">
                         <div class="info-fcontainer">
                             <div class="infof-icon">
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="infof-content">
-                                <h3>Phone Support</h3>
-                                <p>+88 0173 7803547</p>
+                                <h3>Số điện thoại</h3>
+                                <p>{{ $setting->phone_number }}</p>
                             </div>
                         </div>
                     </div>
+                    <?php } ?>
+                    <?php if(!empty($setting->email)){ ?>
                     <div class="col-md-3 col-sm-4">
                         <div class="info-fcontainer">
                             <div class="infof-icon">
                                 <i class="fa fa-envelope"></i>
                             </div>
                             <div class="infof-content">
-                                <h3>Email Support</h3>
-                                <p>admin@bootexperts.com</p>
+                                <h3>Email Hỗ trợ</h3>
+                                <p>{{$setting->email}}</p>
                             </div>
                         </div>
                     </div>
+                    @php } @endphp
+                    <?php if(!empty($setting->opening_from) || !empty($setting->opening_to)){ ?>
                     <div class="col-md-3 hidden-sm">
                         <div class="info-fcontainer">
                             <div class="infof-icon">
                                 <i class="fa fa-clock-o"></i>
                             </div>
                             <div class="infof-content">
-                                <h3>Openning Hour</h3>
-                                <p>Sat - Thu : 9:00 am - 22:00 pm</p>
+                                <h3>Giờ mở cửa</h3>
+                                <p>Từ {{$setting->opening_from}} đến {{$setting->opening_to}}</p>
                             </div>
                         </div>
                     </div>
+                    @php } @endphp
                 </div>
             </div>
-
     </div>
     <!-- info footer end -->
     <!-- banner footer area start -->

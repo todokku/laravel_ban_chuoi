@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     protected $table = 'settings';
-    protected $fillable = ['address','copyright', 'logo_url', 'short_description', 'facebook_url', 'twitter_url'];
+    protected $fillable = ['phone_number','email', 'opening_from', 'opening_to', 'short_description', 'address','copyright', 'logo_url', 'facebook_url', 'twitter_url'];
 }
