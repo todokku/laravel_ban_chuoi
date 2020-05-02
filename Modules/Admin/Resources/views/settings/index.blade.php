@@ -19,7 +19,7 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="copyright_text">Copyright</label>
-                            <input type="text" value="{{old('copyright_text')}}" class="form-control" id="copyright_text" name="copyright_text" placeholder="Copyright Text" autocomplete="off" >
+                            <input type="text" value="{{old('copyright_text')}}" class="form-control" id="copyright_text" name="copyright_text" placeholder="Copyright Text" >
                             </div>
                             <div class="form-group">
                                 <label for="short_description">Mô tả ngắn</label>
