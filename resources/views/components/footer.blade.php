@@ -3,20 +3,20 @@
     <div class="top-footer-area">
         <div class="container">
             <div class="row">
+                <?php  if(!empty($setting->short_description)){ ?>
                 <div class="col-md-3 col-sm-4">
                     <div class="single-snap-footer">
                         <div class="snap-footer-title">
-                            <h4>test1 Company info</h4>
+                            <h4>Giới thiệu</h4>
                         </div>
                         <div class="cakewalk-footer-content">
-                            <p class="footer-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                                wisi enim adm.</p>
-                            <a href="#" class="read-more">Read more</a>
+                            <p class="footer-des">{{ $setting->short_description }}</p>
+                            {{-- <a href="#" class="read-more">Read more</a> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4">
+                <?php } ?>
+                {{-- <div class="col-md-3 col-sm-4">
                     <div class="single-snap-footer">
                         <div class="snap-footer-title">
                             <h4>Information</h4>
@@ -63,80 +63,90 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+                @if (!empty($setting->facebook_url) || !empty($setting->facebook_url))
                 <div class="col-md-2 hidden-sm">
                     <div class="single-snap-footer">
                         <div class="snap-footer-title">
-                            <h4>Follow Us</h4>
+                            <h4>Theo dõi chúng tôi</h4>
                         </div>
                         <div class="cakewalk-footer-content social-footer">
                             <ul>
-                                <li><a href="https://www.facebook.com" target="_blank"><i
-                                            class="fa fa-facebook"></i></a><span> Facebook</span></li>
-                                <li><a href="https://plus.google.com/" target="_blank"><i
-                                            class="fa fa-google-plus"></i></a><span> Google Plus</span></li>
-                                <li><a href="https://twitter.com/" target="_blank"><i
+                                @if (!empty($setting->facebook_url))
+                                <li><a href="{{ $setting->facebook_url }}" target="_blank"><i
+                                        class="fa fa-facebook"></i></a><span> Facebook</span></li>
+                                @endif
+                                @if (!empty($setting->twitter_url))
+                                <li><a href="{{$setting->twitter_url}}" target="_blank"><i
                                             class="fa fa-twitter"></i></a><span> Twitter</span></li>
-                                <li><a href="https://youtube.com/" target="_blank"><i
-                                            class="fa fa-youtube-play"></i></a><span> Youtube</span></li>
+                                @endif
                             </ul>
                         </div>
                     </div>
                 </div>
+                @endif
             </div>
         </div>
     </div>
     <!-- top footer area end -->
     <!-- info footer start -->
     <div class="info-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-4">
-                    <div class="info-fcontainer">
-                        <div class="infof-icon">
-                            <i class="fa fa-map-marker"></i>
+  
+            <div class="container">
+                <div class="row">
+                    <?php  if(!empty($setting->short_description)){ ?>
+                        <div class="col-md-3 col-sm-4">
+                            <div class="info-fcontainer">
+                                <div class="infof-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="infof-content">
+                                    <h3>Địa chỉ</h3>
+                                    <p> 
+                                        @php
+                                            echo $setting->copyright; 
+                                        @endphp
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="infof-content">
-                            <h3>Our Address</h3>
-                            <p>Main Street, Banasree, Dhaka</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <div class="info-fcontainer">
-                        <div class="infof-icon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="infof-content">
-                            <h3>Phone Support</h3>
-                            <p>+88 0173 7803547</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <div class="info-fcontainer">
-                        <div class="infof-icon">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="infof-content">
-                            <h3>Email Support</h3>
-                            <p>admin@bootexperts.com</p>
+                    @php } @endphp
+                    <div class="col-md-3 col-sm-4">
+                        <div class="info-fcontainer">
+                            <div class="infof-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="infof-content">
+                                <h3>Phone Support</h3>
+                                <p>+88 0173 7803547</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 hidden-sm">
-                    <div class="info-fcontainer">
-                        <div class="infof-icon">
-                            <i class="fa fa-clock-o"></i>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="info-fcontainer">
+                            <div class="infof-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="infof-content">
+                                <h3>Email Support</h3>
+                                <p>admin@bootexperts.com</p>
+                            </div>
                         </div>
-                        <div class="infof-content">
-                            <h3>Openning Hour</h3>
-                            <p>Sat - Thu : 9:00 am - 22:00 pm</p>
+                    </div>
+                    <div class="col-md-3 hidden-sm">
+                        <div class="info-fcontainer">
+                            <div class="infof-icon">
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+                            <div class="infof-content">
+                                <h3>Openning Hour</h3>
+                                <p>Sat - Thu : 9:00 am - 22:00 pm</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
     </div>
     <!-- info footer end -->
     <!-- banner footer area start -->
@@ -194,7 +204,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-                    <address>Copyright © <a href="http://bootexperts.com/">BootExperts.</a> All Rights Reserved
+                    <address>Copyright © <a href="http://bootexperts.com/">@php  if(!empty($setting->copyright)){ echo $setting->copyright;} @endphp</a> All Rights Reserved
                     </address>
                 </div>
                 <div class="col-md-6 col-xs-12">
